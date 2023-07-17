@@ -1,0 +1,20 @@
+{
+  "pt": {
+    "language": "PT",
+    "header": {
+      "home": "Home",
+      "projects": "Projetos",
+      "about": "Sobre",
+      "resume": "Currículo"
+    }
+  },
+  "en": {
+    "language": "EN",
+    "header": {
+      "home": "Home",
+      "projects": "Projects",
+      "about": "About",
+      "resume": "Resume"
+    }
+  }
+}
