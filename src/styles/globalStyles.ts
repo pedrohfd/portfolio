@@ -15,18 +15,6 @@ export const GlobalStyle = createGlobalStyle<Partial<ThemeProps>>`
   }
 
   ::-webkit-scrollbar {
-    width: 0.75rem;
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: ${({ theme }) => theme.buttonColor};
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.buttonColorHover};
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: ${({ theme }) => theme.titleTextColor};
+    display: none;
   }
 `
