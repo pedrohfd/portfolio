@@ -88,7 +88,7 @@ export const SwitchTheme = styled.label`
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: ${colors.neutral[50]};
+      background-color: ${colors.neutral[900]};
       transition: 0.4s;
       border-radius: 30px;
     }
@@ -107,14 +107,14 @@ export const SwitchTheme = styled.label`
     }
 
     input:checked + .slider {
-      background-color: ${colors.neutral[900]};
+      background-color: ${colors.neutral[50]};
     }
 
     input:checked + .slider:before {
       left: calc(
         100% - (var(--size-of-icon, 1.4rem) + var(--slider-offset, 0.3rem))
       );
-      background: ${colors.neutral[900]};
+      background: ${colors.neutral[50]};
       box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
     }
     border: none;

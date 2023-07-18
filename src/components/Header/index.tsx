@@ -63,7 +63,7 @@ export const Header = ({
               <input
                 type='checkbox'
                 onChange={handleToggleTheme}
-                checked={theme === 'light' ? false : true}
+                checked={theme === 'light' ? true : false}
               />
               <span className='slider'></span>
             </SwitchTheme>
