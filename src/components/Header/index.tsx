@@ -9,29 +9,14 @@ import {
   Logo,
   SwitchTheme,
 } from './styles'
-import { HomeProps } from '../../types'
-import { useState } from 'react'
+import { HeaderProps } from '../../types'
 
 export const Header = ({
   handleToggleTheme,
+  handleChangeLanguage,
   theme,
   translation,
-}: HomeProps) => {
-  const [language, setLanguage] = useState(translation.pt)
-
-  const handleSelectLanguage = (language: string) => {
-    switch (language) {
-      case 'PT':
-        setLanguage(translation.pt)
-        break
-      case 'EN':
-        setLanguage(translation.en)
-        break
-      default:
-        setLanguage(translation.pt)
-    }
-  }
-
+}: HeaderProps) => {
   return (
     <HeaderContainer>
       <Logo actualTheme={theme} />
@@ -39,29 +24,29 @@ export const Header = ({
       <nav>
         <ul>
           <li>
-            <Button>{language.header.home}</Button>
+            <Button>{translation.header.home}</Button>
           </li>
           <li>
-            <Button>{language.header.projects}</Button>
+            <Button>{translation.header.projects}</Button>
           </li>
           <li>
-            <Button>{language.header.about}</Button>
+            <Button>{translation.header.about}</Button>
           </li>
           <li>
-            <Button>{language.header.resume}</Button>
+            <Button>{translation.header.contact}</Button>
           </li>
           <li>
             <DropDownRoot>
-              <DropDownTrigger>{language.language}</DropDownTrigger>
+              <DropDownTrigger>{translation.language}</DropDownTrigger>
 
               <DropDownPortal>
                 <DropDownContent>
-                  {language.language === 'EN' ? (
-                    <DropDownItem onSelect={() => handleSelectLanguage('PT')}>
+                  {translation.language === 'EN' ? (
+                    <DropDownItem onSelect={() => handleChangeLanguage('PT')}>
                       PT
                     </DropDownItem>
                   ) : (
-                    <DropDownItem onSelect={() => handleSelectLanguage('EN')}>
+                    <DropDownItem onSelect={() => handleChangeLanguage('EN')}>
                       EN
                     </DropDownItem>
                   )}

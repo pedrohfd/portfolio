@@ -13,6 +13,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
 
   @media (min-width: 641px) {
     ul {

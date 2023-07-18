@@ -5,8 +5,13 @@
       "home": "Home",
       "projects": "Projetos",
       "about": "Sobre",
-      "resume": "Currículo"
-    }
+      "contact": "Contato"
+    },
+    "presentation": "Olá, Eu sou o Pedro Henrique.",
+    "role": "Desenvolvedor Front-End",
+    "summary": "",
+    "getInTouch": "Entre em contato",
+    "resume": "Currículo"
   },
   "en": {
     "language": "EN",
@@ -14,7 +19,12 @@
       "home": "Home",
       "projects": "Projects",
       "about": "About",
-      "resume": "Resume"
-    }
+      "contact": "Contact"
+    },
+    "presentation": "Hi, I'm Pedro Henrique.",
+    "role": "Front-End Developer",
+    "summary": "",
+    "getInTouch": "Get In Touch",
+    "resume": "Resume"
   }
 }

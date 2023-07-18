@@ -4,6 +4,13 @@ export interface HomeProps {
   translation: Translations
 }
 
+export interface HeaderProps {
+  handleToggleTheme: () => void
+  handleChangeLanguage: (state: string) => void
+  theme: 'light' | 'dark'
+  translation: Language
+}
+
 export interface ThemeProps {
   actualTheme: 'light' | 'dark'
   theme: {
@@ -11,17 +18,21 @@ export interface ThemeProps {
     logoMobile: string
     headerTextColor: string
     bgColor: string
+    titleTextColor: string
+    roleTextColor: string
   }
 }
 
-interface Language {
+export interface Language {
   language: string
   header: {
     home: string
     projects: string
     about: string
-    resume: string
+    contact: string
   }
+  presentation: string
+  role: string
 }
 
 export interface Translations {
