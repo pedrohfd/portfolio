@@ -11,14 +11,30 @@ export interface Language {
     about: string
     contact: string
   }
-  presentation: string
-  role: string
-  summary: string
-  getInTouch: string
-  resume: string
+  home: {
+    presentation: string
+    role: string
+    summary: string
+    getInTouch: string
+    resume: string
+  }
+  projects: {
+    title: string
+    drafts: Draft[]
+  }
 }
 
-export interface HomeProps {
+interface Draft {
+  title: string
+  description: string
+  image: string
+  link: string
+  github: string
+  technologies: string[]
+  demo: string
+}
+
+export interface PageProps {
   translation: Language
 }
 

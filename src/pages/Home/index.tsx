@@ -1,4 +1,4 @@
-import { HomeProps } from '../../types'
+import { PageProps } from '../../types'
 import {
   Footer,
   HomeContainer,
@@ -16,16 +16,16 @@ import { GithubIcon } from '../../components/GithubIcon'
 import { LinkedinIcon } from '../../components/LinkedinIcon'
 import { ArrowDownIcon } from '../../components/ArrowDownIcon'
 
-export const Home = ({ translation }: HomeProps) => {
+export const Home = ({ translation }: PageProps) => {
   return (
     <HomeContainer>
       <HomeContent>
         <div>
-          <Presentation>{translation.presentation}</Presentation>
+          <Presentation>{translation.home.presentation}</Presentation>
 
-          <Role>{translation.role}</Role>
+          <Role>{translation.home.role}</Role>
 
-          <Summary>{translation.summary}</Summary>
+          <Summary>{translation.home.summary}</Summary>
 
           <section>
             <LinkIconButton href='https://github.com/pedrohfd' target='_blank'>
@@ -37,9 +37,9 @@ export const Home = ({ translation }: HomeProps) => {
             >
               <LinkedinIcon />
             </LinkIconButton>
-            <LinkButton href='#'>{translation.getInTouch}</LinkButton>
+            <LinkButton href='#'>{translation.home.getInTouch}</LinkButton>
             <LinkButton download='../../assets/Currículo.pdf'>
-              {translation.resume}
+              {translation.home.resume}
             </LinkButton>
           </section>
         </div>
