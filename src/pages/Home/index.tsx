@@ -1,6 +1,7 @@
 import { Header } from '../../components/Header'
 import { HomeProps, Language } from '../../types'
 import {
+  Footer,
   HomeContainer,
   HomeContent,
   HomeImage,
@@ -14,6 +15,7 @@ import { useState } from 'react'
 import illustration from '../../assets/illustration.png'
 import { GithubIcon } from '../../components/GithubIcon'
 import { LinkedinIcon } from '../../components/LinkedinIcon'
+import { ArrowDownIcon } from '../../components/ArrowDownIcon'
 
 export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
   const [language, setLanguage] = useState<Language>(translation.pt)
@@ -67,6 +69,11 @@ export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
 
         <HomeImage src={illustration} alt='illustration' />
       </HomeContent>
+
+      <Footer>
+        Scroll
+        <ArrowDownIcon />
+      </Footer>
     </HomeContainer>
   )
 }

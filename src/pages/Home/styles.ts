@@ -111,3 +111,25 @@ export const HomeImage = styled.img`
     margin-bottom: 13rem;
   }
 `
+
+export const Footer = styled.footer<Partial<ThemeProps>>`
+  @media (min-width: 641px) {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: ${({ theme }) => theme.titleTextColor};
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    line-height: 1.375rem;
+    letter-spacing: 0.01875rem;
+
+    margin-bottom: 2rem;
+
+    svg {
+      margin-top: 0.1rem;
+    }
+  }
+`
