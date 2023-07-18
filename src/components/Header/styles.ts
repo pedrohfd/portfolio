@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { ThemeProps } from '../../types'
 import { colors } from '../../styles/colors'
 import {
@@ -7,6 +7,7 @@ import {
   Portal,
   Root,
   Trigger,
+  Arrow,
 } from '@radix-ui/react-dropdown-menu'
 
 export const HeaderContainer = styled.header`
@@ -51,6 +52,13 @@ export const Button = styled.button<Partial<ThemeProps>>`
     border: none;
     background: none;
     cursor: pointer;
+
+    transition: all 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+      color: ${({ theme }) => theme.headerTextHover};
+    }
   }
 `
 
@@ -132,12 +140,39 @@ export const DropDownTrigger = styled(Trigger)<Partial<ThemeProps>>`
   background: none;
   outline: none;
   cursor: pointer;
+
+  transition: all 0.2s;
+
+  &:hover {
+    text-decoration: underline;
+    color: ${({ theme }) => theme.headerTextHover};
+  }
 `
 
 export const DropDownPortal = styled(Portal)<Partial<ThemeProps>>``
 
+const scaleIn = keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`
+
 export const DropDownContent = styled(Content)<Partial<ThemeProps>>`
-  background-color: ${({ theme }) => theme.bgColor};
+  background-color: ${({ theme }) => theme.headerDropdown};
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.3rem;
+
+  transform-origin: var(--radix-dropdown-menu-content-transform-origin);
+  animation: ${scaleIn} 0.2s ease-out;
+`
+
+export const DropDownArrow = styled(Arrow)<Partial<ThemeProps>>`
+  fill: ${({ theme }) => theme.headerDropdown};
 `
 
 export const DropDownItem = styled(Item)<Partial<ThemeProps>>`

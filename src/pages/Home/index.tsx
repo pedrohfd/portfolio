@@ -4,11 +4,16 @@ import {
   HomeContainer,
   HomeContent,
   HomeImage,
+  LinkButton,
+  LinkIconButton,
   Presentation,
   Role,
+  Summary,
 } from './styles'
 import { useState } from 'react'
 import illustration from '../../assets/illustration.png'
+import { GithubIcon } from '../../components/GithubIcon'
+import { LinkedinIcon } from '../../components/LinkedinIcon'
 
 export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
   const [language, setLanguage] = useState<Language>(translation.pt)
@@ -40,6 +45,24 @@ export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
           <Presentation>{language.presentation}</Presentation>
 
           <Role>{language.role}</Role>
+
+          <Summary>{language.summary}</Summary>
+
+          <section>
+            <LinkIconButton href='https://github.com/pedrohfd' target='_blank'>
+              <GithubIcon />
+            </LinkIconButton>
+            <LinkIconButton
+              href='https://linkedin.com/in/pedrohfd'
+              target='_blank'
+            >
+              <LinkedinIcon />
+            </LinkIconButton>
+            <LinkButton href='#'>{language.getInTouch}</LinkButton>
+            <LinkButton download='../../assets/Currículo.pdf'>
+              {language.resume}
+            </LinkButton>
+          </section>
         </div>
 
         <HomeImage src={illustration} alt='illustration' />

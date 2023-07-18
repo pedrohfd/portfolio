@@ -13,14 +13,30 @@ export interface HeaderProps {
 
 export interface ThemeProps {
   actualTheme: 'light' | 'dark'
-  theme: {
-    logoWeb: string
-    logoMobile: string
-    headerTextColor: string
-    bgColor: string
-    titleTextColor: string
-    roleTextColor: string
-  }
+  theme: Theme
+}
+
+interface Theme {
+  // background and logo
+  logoWeb: string
+  logoMobile: string
+  bgColor: string
+
+  // header
+  headerTextColor: string
+  headerTextHover: string
+  headerDropdown: string
+
+  // texts
+  titleTextColor: string
+  roleTextColor: string
+  summaryTextColor: string
+
+  // buttons
+  buttonTextPrimary: string
+  buttonTextSecondary: string
+  buttonColor: string
+  buttonColorHover: string
 }
 
 export interface Language {
@@ -33,6 +49,9 @@ export interface Language {
   }
   presentation: string
   role: string
+  summary: string
+  getInTouch: string
+  resume: string
 }
 
 export interface Translations {

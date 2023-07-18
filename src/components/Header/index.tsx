@@ -1,5 +1,6 @@
 import {
   Button,
+  DropDownArrow,
   DropDownContent,
   DropDownItem,
   DropDownPortal,
@@ -37,7 +38,9 @@ export const Header = ({
           </li>
           <li>
             <DropDownRoot>
-              <DropDownTrigger>{translation.language}</DropDownTrigger>
+              <DropDownTrigger asChild>
+                <button>{translation.language}</button>
+              </DropDownTrigger>
 
               <DropDownPortal>
                 <DropDownContent>
@@ -50,6 +53,7 @@ export const Header = ({
                       EN
                     </DropDownItem>
                   )}
+                  <DropDownArrow />
                 </DropDownContent>
               </DropDownPortal>
             </DropDownRoot>
