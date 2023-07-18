@@ -1,7 +1,25 @@
+export interface Translations {
+  pt: Language
+  en: Language
+}
+
+export interface Language {
+  language: string
+  header: {
+    home: string
+    projects: string
+    about: string
+    contact: string
+  }
+  presentation: string
+  role: string
+  summary: string
+  getInTouch: string
+  resume: string
+}
+
 export interface HomeProps {
-  handleToggleTheme: () => void
-  theme: 'light' | 'dark'
-  translation: Translations
+  translation: Language
 }
 
 export interface HeaderProps {
@@ -37,24 +55,4 @@ interface Theme {
   buttonTextSecondary: string
   buttonColor: string
   buttonColorHover: string
-}
-
-export interface Language {
-  language: string
-  header: {
-    home: string
-    projects: string
-    about: string
-    contact: string
-  }
-  presentation: string
-  role: string
-  summary: string
-  getInTouch: string
-  resume: string
-}
-
-export interface Translations {
-  pt: Language
-  en: Language
 }

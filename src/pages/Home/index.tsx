@@ -1,5 +1,4 @@
-import { Header } from '../../components/Header'
-import { HomeProps, Language } from '../../types'
+import { HomeProps } from '../../types'
 import {
   Footer,
   HomeContainer,
@@ -11,44 +10,22 @@ import {
   Role,
   Summary,
 } from './styles'
-import { useState } from 'react'
+
 import illustration from '../../assets/illustration.png'
 import { GithubIcon } from '../../components/GithubIcon'
 import { LinkedinIcon } from '../../components/LinkedinIcon'
 import { ArrowDownIcon } from '../../components/ArrowDownIcon'
 
-export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
-  const [language, setLanguage] = useState<Language>(translation.pt)
-
-  const handleSelectLanguage = (language: string) => {
-    switch (language) {
-      case 'PT':
-        setLanguage(translation.pt)
-        break
-      case 'EN':
-        setLanguage(translation.en)
-        break
-      default:
-        setLanguage(translation.pt)
-    }
-  }
-
+export const Home = ({ translation }: HomeProps) => {
   return (
     <HomeContainer>
-      <Header
-        handleToggleTheme={handleToggleTheme}
-        theme={theme}
-        translation={language}
-        handleChangeLanguage={handleSelectLanguage}
-      />
-
       <HomeContent>
         <div>
-          <Presentation>{language.presentation}</Presentation>
+          <Presentation>{translation.presentation}</Presentation>
 
-          <Role>{language.role}</Role>
+          <Role>{translation.role}</Role>
 
-          <Summary>{language.summary}</Summary>
+          <Summary>{translation.summary}</Summary>
 
           <section>
             <LinkIconButton href='https://github.com/pedrohfd' target='_blank'>
@@ -60,9 +37,9 @@ export const Home = ({ handleToggleTheme, theme, translation }: HomeProps) => {
             >
               <LinkedinIcon />
             </LinkIconButton>
-            <LinkButton href='#'>{language.getInTouch}</LinkButton>
+            <LinkButton href='#'>{translation.getInTouch}</LinkButton>
             <LinkButton download='../../assets/Currículo.pdf'>
-              {language.resume}
+              {translation.resume}
             </LinkButton>
           </section>
         </div>

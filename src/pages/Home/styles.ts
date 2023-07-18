@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ThemeProps } from '../../types'
 
-export const HomeContainer = styled.main`
+export const HomeContainer = styled.div`
   @media (min-width: 641px) {
     display: flex;
     flex-direction: column;
@@ -127,6 +127,8 @@ export const Footer = styled.footer<Partial<ThemeProps>>`
     letter-spacing: 0.01875rem;
 
     margin-bottom: 2rem;
+
+    transition: all 0.2s;
 
     svg {
       margin-top: 0.1rem;
