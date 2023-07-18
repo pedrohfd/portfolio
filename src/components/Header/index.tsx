@@ -37,7 +37,7 @@ export const Header = ({
             <Button>{translation.header.contact}</Button>
           </li>
           <li>
-            <DropDownRoot>
+            <DropDownRoot modal={false}>
               <DropDownTrigger asChild>
                 <button>{translation.language}</button>
               </DropDownTrigger>

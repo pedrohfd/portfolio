@@ -6,6 +6,7 @@ import { GlobalStyle } from './styles/globalStyles'
 import translation from '../language.json'
 import { Language } from './types'
 import { Header } from './components/Header'
+import { Projects } from './pages/Projects'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -38,6 +39,8 @@ const App = () => {
         handleChangeLanguage={handleSelectLanguage}
       />
       <Home translation={language} />
+
+      <Projects translation={language} />
     </ThemeProvider>
   )
 }

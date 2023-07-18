@@ -13,4 +13,20 @@ export const GlobalStyle = createGlobalStyle<Partial<ThemeProps>>`
     background-color: ${({ theme }) => theme.bgColor};
     transition: all .2s;
   }
+
+  ::-webkit-scrollbar {
+    width: 0.75rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: ${({ theme }) => theme.buttonColor};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.buttonColorHover};
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: ${({ theme }) => theme.titleTextColor};
+  }
 `
