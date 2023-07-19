@@ -299,9 +299,10 @@ export const Footer = styled.footer<Partial<ThemeProps>>`
     flex-direction: column;
     align-items: center;
     bottom: 0;
-    left: 50%;
     line-height: 1.375rem;
     letter-spacing: 0.01875rem;
+
+    align-self: center;
 
     margin-bottom: 2rem;
 
