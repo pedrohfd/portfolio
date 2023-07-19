@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import { ThemeProps } from '../../types'
+import { breakpoints } from '../../styles/breakpoints'
 
 export const HomeContainer = styled.div`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -10,7 +11,7 @@ export const HomeContainer = styled.div`
 `
 
 export const HomeContent = styled.div`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     display: flex;
     padding: 0 8rem 0;
     height: 100%;
@@ -27,7 +28,7 @@ export const HomeContent = styled.div`
 `
 
 export const Presentation = styled.h3<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.titleTextColor};
     font-family: 'Sora', sans-serif;
     font-size: 3.5rem;
@@ -38,7 +39,7 @@ export const Presentation = styled.h3<Partial<ThemeProps>>`
 `
 
 export const Role = styled.h4<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.roleTextColor};
     font-family: 'Sora', sans-serif;
     font-size: 2rem;
@@ -49,7 +50,7 @@ export const Role = styled.h4<Partial<ThemeProps>>`
 `
 
 export const Summary = styled.p<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.summaryTextColor};
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
@@ -61,7 +62,7 @@ export const Summary = styled.p<Partial<ThemeProps>>`
 `
 
 export const LinkIconButton = styled.a<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     display: inline-flex;
     padding: 0.62rem;
     background: ${({ theme }) => theme.buttonColor};
@@ -79,7 +80,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
 `
 
 export const LinkButton = styled.a<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.buttonTextPrimary};
     font-family: 'Inter', sans-serif;
     font-size: 0.875rem;
@@ -105,7 +106,7 @@ export const LinkButton = styled.a<Partial<ThemeProps>>`
 `
 
 export const HomeImage = styled.img`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     width: 45rem;
     height: 45rem;
     margin-bottom: 13rem;
@@ -113,7 +114,7 @@ export const HomeImage = styled.img`
 `
 
 export const Footer = styled.footer<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     color: ${({ theme }) => theme.titleTextColor};

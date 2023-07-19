@@ -9,6 +9,7 @@ import {
   Trigger,
   Arrow,
 } from '@radix-ui/react-dropdown-menu'
+import { breakpoints } from '../../styles/breakpoints'
 
 export const HeaderContainer = styled.header`
   display: flex;
@@ -17,7 +18,7 @@ export const HeaderContainer = styled.header`
   position: fixed;
   width: 100%;
 
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     ul {
       display: flex;
       list-style: none;
@@ -29,7 +30,7 @@ export const HeaderContainer = styled.header`
 `
 
 export const Logo = styled.div<ThemeProps>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     background-image: ${({ theme }) => theme.logoWeb};
     width: 4.375rem;
     height: 3.5rem;
@@ -43,7 +44,7 @@ export const Logo = styled.div<ThemeProps>`
 `
 
 export const Button = styled.button<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.headerTextColor};
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -63,7 +64,7 @@ export const Button = styled.button<Partial<ThemeProps>>`
 `
 
 export const SwitchTheme = styled.label`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     &.switch {
       display: block;
       --width-of-switch: 3.5rem;
@@ -123,7 +124,7 @@ export const SwitchTheme = styled.label`
 `
 
 export const DropDownRoot = styled(Root)<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     .dropDownTrigger {
       color: ${colors.purple[500]};
     }
@@ -188,7 +189,7 @@ export const DropDownItem = styled(Item)<Partial<ThemeProps>>`
 `
 
 export const ChangeLanguage = styled.button<Partial<ThemeProps>>`
-  @media (min-width: 641px) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.headerTextColor};
     font-family: 'Inter', sans-serif;
     font-weight: 400;
