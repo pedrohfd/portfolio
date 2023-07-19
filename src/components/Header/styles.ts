@@ -11,12 +11,14 @@ import {
 } from '@radix-ui/react-dropdown-menu'
 import { breakpoints } from '../../styles/breakpoints'
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header<Partial<ThemeProps>>`
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   width: 100%;
+
+  background-color: ${({ theme }) => theme.bgColor};
 
   @media (min-width: ${breakpoints.xxl}) {
     ul {
