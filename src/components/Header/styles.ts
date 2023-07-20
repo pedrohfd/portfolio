@@ -20,6 +20,8 @@ export const HeaderContainer = styled.header<Partial<ThemeProps>>`
 
   background-color: ${({ theme }) => theme.bgColor};
 
+  transition: all 0.2s;
+
   @media (min-width: ${breakpoints.xxl}) {
     ul {
       display: flex;
