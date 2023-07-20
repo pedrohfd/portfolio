@@ -1,5 +1,4 @@
 import {
-  Button,
   DropDownArrow,
   DropDownContent,
   DropDownItem,
@@ -24,18 +23,6 @@ export const Header = ({
 
       <nav>
         <ul>
-          <li>
-            <Button>{translation.header.home}</Button>
-          </li>
-          <li>
-            <Button>{translation.header.projects}</Button>
-          </li>
-          <li>
-            <Button>{translation.header.about}</Button>
-          </li>
-          <li>
-            <Button>{translation.header.contact}</Button>
-          </li>
           <li>
             <DropDownRoot modal={false}>
               <DropDownTrigger asChild>

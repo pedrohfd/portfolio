@@ -1,12 +1,6 @@
 {
   "pt": {
     "language": "PT",
-    "header": {
-      "home": "Home",
-      "projects": "Projetos",
-      "about": "Sobre",
-      "contact": "Contato"
-    },
     "home": {
       "presentation": "Olá, Eu sou o Pedro Henrique.",
       "role": "Desenvolvedor Front-End",
@@ -50,12 +44,6 @@
   },
   "en": {
     "language": "EN",
-    "header": {
-      "home": "Home",
-      "projects": "Projects",
-      "about": "About",
-      "contact": "Contact"
-    },
     "home": {
       "presentation": "Hi, I'm Pedro Henrique.",
       "role": "Front-End Developer",

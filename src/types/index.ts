@@ -5,12 +5,6 @@ export interface Translations {
 
 export interface Language {
   language: string
-  header: {
-    home: string
-    projects: string
-    about: string
-    contact: string
-  }
   home: {
     presentation: string
     role: string

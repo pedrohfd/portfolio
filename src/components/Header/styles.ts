@@ -73,62 +73,6 @@ export const Logo = styled.div<ThemeProps>`
   }
 `
 
-export const Button = styled.button<Partial<ThemeProps>>`
-  @media (min-width: ${breakpoints.xxl}) {
-    color: ${({ theme }) => theme.headerTextColor};
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 2rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    transition: all 0.2s;
-
-    &:hover {
-      text-decoration: underline;
-      color: ${({ theme }) => theme.headerTextHover};
-    }
-  }
-
-  @media (min-width: ${breakpoints.xl}) and (max-width: ${breakpoints.xxl}) {
-    color: ${({ theme }) => theme.headerTextColor};
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 2rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    transition: all 0.2s;
-
-    &:hover {
-      text-decoration: underline;
-      color: ${({ theme }) => theme.headerTextHover};
-    }
-  }
-
-  @media (min-width: ${breakpoints.lg}) and (max-width: ${breakpoints.xl}) {
-    color: ${({ theme }) => theme.headerTextColor};
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 2rem;
-    border: none;
-    background: none;
-    cursor: pointer;
-
-    transition: all 0.2s;
-
-    &:hover {
-      text-decoration: underline;
-      color: ${({ theme }) => theme.headerTextHover};
-    }
-  }
-`
-
 export const SwitchTheme = styled.label`
   @media (min-width: ${breakpoints.xxl}) {
     &.switch {
