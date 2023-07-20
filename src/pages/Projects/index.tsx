@@ -1,9 +1,19 @@
+import { ProjectCard } from '../../components/ProjectCard'
 import { PageProps } from '../../types'
+import { ProjectsContainer, ProjectsContent, Title } from './styles'
 
 export const Projects = ({ translation }: PageProps) => {
   return (
-    <div>
-      <h1>{translation.projects.title}</h1>
-    </div>
+    <ProjectsContainer>
+      <ProjectsContent>
+        <Title>{translation.projects.title}</Title>
+
+        <section>
+          {translation.projects.drafts.map((draft, index) => (
+            <ProjectCard key={index} {...draft} />
+          ))}
+        </section>
+      </ProjectsContent>
+    </ProjectsContainer>
   )
 }

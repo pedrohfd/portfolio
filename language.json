@@ -19,12 +19,31 @@
       "drafts": [
         {
           "title": "Space Tourism",
-          "description": "Aplicativo para ver algumas curiosidades sobre astronomia",
-          "link": "",
-          "image": "https://i.imgur.com/5Q9Z0XN.png",
-          "github": "",
-          "technologies": ["React Native", "Typescript", "Styled Components"],
-          "demo": ""
+          "description": "Aplicação com algumas curiosidades sobre astronomia.",
+          "image": "https://storage.googleapis.com/pedrohfd-portfolio/spaceTourism.png",
+          "source": {
+            "text": "Código fonte",
+            "link": "https://github.com/pedrohfd/space-tourism"
+          },
+          "technologies": ["react", "typescript", "Styled Components"],
+          "demo": {
+            "text": "Demo",
+            "link": "https://space-tourism-pedrohfd.vercel.app"
+          }
+        },
+        {
+          "title": "Dev Links",
+          "description": "Aplicação para compartilhar links pessoais.",
+          "image": "https://storage.googleapis.com/pedrohfd-portfolio/devLinks.png",
+          "source": {
+            "text": "Código fonte",
+            "link": "https://github.com/pedrohfd/devLinks"
+          },
+          "technologies": ["react", "typescript", "Styled Components"],
+          "demo": {
+            "text": "Demo",
+            "link": "https://dev-links-pedrohfd.vercel.app"
+          }
         }
       ]
     }
@@ -49,12 +68,31 @@
       "drafts": [
         {
           "title": "Space Tourism",
-          "description": "App to see some curiosities about astronomy",
-          "link": "",
-          "image": "https://i.imgur.com/5Q9Z0XN.png",
-          "github": "",
-          "technologies": ["React Native", "Typescript", "Styled Components"],
-          "demo": ""
+          "description": "App to see some curiosities about astronomy.",
+          "image": "https://storage.googleapis.com/pedrohfd-portfolio/spaceTourism.png",
+          "source": {
+            "text": "Source code",
+            "link": "https://github.com/pedrohfd/space-tourism"
+          },
+          "technologies": ["react", "typescript", "Styled Components"],
+          "demo": {
+            "text": "live demo",
+            "link": "https://space-tourism-pedrohfd.vercel.app"
+          }
+        },
+        {
+          "title": "Dev Links",
+          "description": "App to share personal links.",
+          "image": "https://storage.googleapis.com/pedrohfd-portfolio/devLinks.png",
+          "source": {
+            "text": "Source code",
+            "link": "https://github.com/pedrohfd/devLinks"
+          },
+          "technologies": ["react", "typescript", "Styled Components"],
+          "demo": {
+            "text": "live demo",
+            "link": "https://dev-links-pedrohfd.vercel.app"
+          }
         }
       ]
     }

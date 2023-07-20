@@ -24,14 +24,19 @@ export interface Language {
   }
 }
 
-interface Draft {
+export interface Draft {
   title: string
   description: string
   image: string
-  link: string
-  github: string
+  source: {
+    text: string
+    link: string
+  }
   technologies: string[]
-  demo: string
+  demo: {
+    text: string
+    link: string
+  }
 }
 
 export interface PageProps {
@@ -51,6 +56,15 @@ export interface ThemeProps {
 }
 
 interface Theme {
+  // responsive breakpoints
+  breakpoints: {
+    sm: string
+    md: string
+    lg: string
+    xl: string
+    xxl: string
+  }
+
   // background and logo
   logoWeb: string
   logoMobile: string
@@ -71,4 +85,9 @@ interface Theme {
   buttonTextSecondary: string
   buttonColor: string
   buttonColorHover: string
+
+  // projects
+  projectCardBorder: string
+  projectCardIcon: string
+  projectCardButtonBorder: string
 }
