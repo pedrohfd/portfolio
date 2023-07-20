@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { ThemeProps } from '../../types'
 
 export const ProjectCardContainer = styled.div<Partial<ThemeProps>>`
+  transition: all 0.2s;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
     text-align: left;
     width: 30rem;
@@ -9,8 +11,6 @@ export const ProjectCardContainer = styled.div<Partial<ThemeProps>>`
     border: 1px solid ${({ theme }) => theme.projectCardBorder};
     border-radius: 0.31rem;
     padding: 1px;
-
-    transition: all 0.2s;
   }
 `
 
@@ -31,17 +31,19 @@ export const ProjectCardInfo = styled.div<Partial<ThemeProps>>`
 `
 
 export const ProjectCardTitle = styled.h5<Partial<ThemeProps>>`
+  transition: all 0.2s;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 1.75rem;
     font-weight: 700;
     font-family: 'Sora', sans-serif;
     color: ${({ theme }) => theme.titleTextColor};
-
-    transition: all 0.2s;
   }
 `
 
 export const ProjectCardDescription = styled.p<Partial<ThemeProps>>`
+  transition: all 0.2s;
+
   @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
     font-size: 1rem;
     font-weight: 400;
@@ -49,58 +51,75 @@ export const ProjectCardDescription = styled.p<Partial<ThemeProps>>`
     color: ${({ theme }) => theme.summaryTextColor};
 
     margin-top: 1rem;
-
-    transition: all 0.2s;
   }
 `
 
 export const ProjectCardTechnologiesArea = styled.div<Partial<ThemeProps>>`
-  margin: 1.5rem 0;
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    margin: 1.5rem 0;
 
-  i {
-    color: ${({ theme }) => theme.projectCardIcon};
-    font-size: 1.5rem;
-    padding: 0.62rem;
+    i {
+      color: ${({ theme }) => theme.projectCardIcon};
+      font-size: 1.5rem;
+      padding: 0.62rem;
 
-    transition: all 0.2s;
+      transition: all 0.2s;
+    }
   }
 `
 
 export const ProjectCardButtonArea = styled.div<Partial<ThemeProps>>``
 
 export const ProjectCardDemoButton = styled.a<Partial<ThemeProps>>`
-  color: ${({ theme }) => theme.buttonTextSecondary};
-  background-color: ${({ theme }) => theme.buttonColor};
-
-  padding: 0.62rem 1rem 0.62rem 1rem;
-  border-radius: 0.31rem;
-  margin-right: 0.5rem;
-
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.49975rem;
-  letter-spacing: 0.0175rem;
-  text-transform: uppercase;
-  text-decoration: none;
-
   transition: all 0.2s;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    color: ${({ theme }) => theme.buttonTextSecondary};
+    background-color: ${({ theme }) => theme.buttonColor};
+
+    padding: 0.62rem 1rem 0.62rem 1rem;
+    border-radius: 0.31rem;
+    margin-right: 0.5rem;
+    border: 1px solid ${({ theme }) => theme.buttonColor};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.49975rem;
+    letter-spacing: 0.0175rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      border-color: ${({ theme }) => theme.buttonColorHover};
+      background-color: ${({ theme }) => theme.buttonColorHover};
+      color: ${({ theme }) => theme.buttonTextPrimary};
+    }
+  }
 `
 
 export const ProjectCardSourceButton = styled.a<Partial<ThemeProps>>`
-  color: ${({ theme }) => theme.buttonTextPrimary};
-
-  padding: 0.62rem 1rem 0.62rem 1rem;
-  border-radius: 0.31rem;
-  border: 1px solid ${({ theme }) => theme.projectCardButtonBorder};
-
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  line-height: 1.49975rem;
-  letter-spacing: 0.0175rem;
-  text-transform: uppercase;
-  text-decoration: none;
-
   transition: all 0.2s;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+    color: ${({ theme }) => theme.buttonTextPrimary};
+
+    padding: 0.62rem 1rem 0.62rem 1rem;
+    border-radius: 0.31rem;
+    border: 1px solid ${({ theme }) => theme.projectCardButtonBorder};
+
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.49975rem;
+    letter-spacing: 0.0175rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      background-color: ${({ theme }) => theme.buttonColorHover};
+      color: ${({ theme }) => theme.buttonTextPrimary};
+      border-color: ${({ theme }) => theme.buttonColorHover};
+    }
+  }
 `
