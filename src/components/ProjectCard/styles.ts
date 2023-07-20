@@ -9,6 +9,8 @@ export const ProjectCardContainer = styled.div<Partial<ThemeProps>>`
     border: 1px solid ${({ theme }) => theme.projectCardBorder};
     border-radius: 0.31rem;
     padding: 1px;
+
+    transition: all 0.2s;
   }
 `
 
@@ -34,6 +36,8 @@ export const ProjectCardTitle = styled.h5<Partial<ThemeProps>>`
     font-weight: 700;
     font-family: 'Sora', sans-serif;
     color: ${({ theme }) => theme.titleTextColor};
+
+    transition: all 0.2s;
   }
 `
 
@@ -45,6 +49,8 @@ export const ProjectCardDescription = styled.p<Partial<ThemeProps>>`
     color: ${({ theme }) => theme.summaryTextColor};
 
     margin-top: 1rem;
+
+    transition: all 0.2s;
   }
 `
 
@@ -55,6 +61,8 @@ export const ProjectCardTechnologiesArea = styled.div<Partial<ThemeProps>>`
     color: ${({ theme }) => theme.projectCardIcon};
     font-size: 1.5rem;
     padding: 0.62rem;
+
+    transition: all 0.2s;
   }
 `
 
@@ -75,6 +83,8 @@ export const ProjectCardDemoButton = styled.a<Partial<ThemeProps>>`
   letter-spacing: 0.0175rem;
   text-transform: uppercase;
   text-decoration: none;
+
+  transition: all 0.2s;
 `
 
 export const ProjectCardSourceButton = styled.a<Partial<ThemeProps>>`
@@ -91,4 +101,6 @@ export const ProjectCardSourceButton = styled.a<Partial<ThemeProps>>`
   letter-spacing: 0.0175rem;
   text-transform: uppercase;
   text-decoration: none;
+
+  transition: all 0.2s;
 `
