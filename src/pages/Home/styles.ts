@@ -159,6 +159,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
 
     &:hover {
       background-color: ${({ theme }) => theme.buttonColorHover};
+      border-color: ${({ theme }) => theme.buttonColorHover};
       color: ${({ theme }) => theme.buttonTextPrimary};
     }
   }
@@ -176,6 +177,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
 
     &:hover {
       background-color: ${({ theme }) => theme.buttonColorHover};
+      border-color: ${({ theme }) => theme.buttonColorHover};
       color: ${({ theme }) => theme.buttonTextPrimary};
     }
   }
@@ -193,6 +195,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
 
     &:hover {
       background-color: ${({ theme }) => theme.buttonColorHover};
+      border-color: ${({ theme }) => theme.buttonColorHover};
       color: ${({ theme }) => theme.buttonTextPrimary};
     }
   }
