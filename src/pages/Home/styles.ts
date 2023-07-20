@@ -167,6 +167,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
     display: inline-flex;
     padding: 0.62rem;
     background: ${({ theme }) => theme.buttonColor};
+    border: 1px solid ${({ theme }) => theme.buttonColor};
     color: ${({ theme }) => theme.bgColor};
     border-radius: 0.31rem;
 
@@ -183,6 +184,7 @@ export const LinkIconButton = styled.a<Partial<ThemeProps>>`
     display: inline-flex;
     padding: 0.62rem;
     background: ${({ theme }) => theme.buttonColor};
+    border: 1px solid ${({ theme }) => theme.buttonColor};
     color: ${({ theme }) => theme.bgColor};
     border-radius: 0.31rem;
 
