@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { ThemeProps } from '../../types'
+import { breakpoints } from './../../styles/breakpoints'
 
 export const ProjectCardContainer = styled.div<Partial<ThemeProps>>`
   transition: all 0.2s;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     text-align: left;
     width: 30rem;
 
@@ -15,7 +16,7 @@ export const ProjectCardContainer = styled.div<Partial<ThemeProps>>`
 `
 
 export const ProjectCardImage = styled.img<Partial<ThemeProps>>`
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     object-fit: cover;
     width: 100%;
     height: 240px;
@@ -25,7 +26,7 @@ export const ProjectCardImage = styled.img<Partial<ThemeProps>>`
 `
 
 export const ProjectCardInfo = styled.div<Partial<ThemeProps>>`
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     padding: 1.5rem 1rem 1.75rem;
   }
 `
@@ -33,7 +34,7 @@ export const ProjectCardInfo = styled.div<Partial<ThemeProps>>`
 export const ProjectCardTitle = styled.h5<Partial<ThemeProps>>`
   transition: all 0.2s;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     font-size: 1.75rem;
     font-weight: 700;
     font-family: 'Sora', sans-serif;
@@ -44,7 +45,7 @@ export const ProjectCardTitle = styled.h5<Partial<ThemeProps>>`
 export const ProjectCardDescription = styled.p<Partial<ThemeProps>>`
   transition: all 0.2s;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
@@ -55,7 +56,7 @@ export const ProjectCardDescription = styled.p<Partial<ThemeProps>>`
 `
 
 export const ProjectCardTechnologiesArea = styled.div<Partial<ThemeProps>>`
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     margin: 1.5rem 0;
 
     i {
@@ -73,7 +74,7 @@ export const ProjectCardButtonArea = styled.div<Partial<ThemeProps>>``
 export const ProjectCardDemoButton = styled.a<Partial<ThemeProps>>`
   transition: all 0.2s;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.buttonTextSecondary};
     background-color: ${({ theme }) => theme.buttonColor};
 
@@ -101,7 +102,7 @@ export const ProjectCardDemoButton = styled.a<Partial<ThemeProps>>`
 export const ProjectCardSourceButton = styled.a<Partial<ThemeProps>>`
   transition: all 0.2s;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.xxl}) {
+  @media (min-width: ${breakpoints.xxl}) {
     color: ${({ theme }) => theme.buttonTextPrimary};
 
     padding: 0.62rem 1rem 0.62rem 1rem;

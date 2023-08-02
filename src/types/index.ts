@@ -40,12 +40,12 @@ export interface PageProps {
 export interface HeaderProps {
   handleToggleTheme: () => void
   handleChangeLanguage: (state: string) => void
-  theme: 'light' | 'dark'
+  theme?: 'light' | 'dark'
   translation: Language
 }
 
 export interface ThemeProps {
-  actualTheme: 'light' | 'dark'
+  actualTheme?: 'light' | 'dark'
   theme: Theme
 }
 

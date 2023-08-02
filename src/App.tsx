@@ -1,19 +1,24 @@
-import { ThemeProvider } from 'styled-components'
 import { Home } from './pages/Home'
-import { darkTheme, lightTheme } from './styles/theme'
 import { useState } from 'react'
-import { GlobalStyle } from './styles/globalStyles'
 import translation from '../language.json'
 import { Language } from './types'
 import { Header } from './components/Header'
 import { Projects } from './pages/Projects'
+import './styles/global.css'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
   const [language, setLanguage] = useState<Language>(translation.pt)
 
   const handleToggleTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light')
+    const html = document.documentElement
+    html.classList.toggle('dark')
+
+    if (html.classList.contains('dark')) {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
   }
 
   const handleSelectLanguage = (language: string) => {
@@ -30,8 +35,7 @@ const App = () => {
   }
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyle />
+    <>
       <Header
         handleToggleTheme={handleToggleTheme}
         theme={theme}
@@ -41,7 +45,7 @@ const App = () => {
       <Home translation={language} />
 
       <Projects translation={language} />
-    </ThemeProvider>
+    </>
   )
 }
 

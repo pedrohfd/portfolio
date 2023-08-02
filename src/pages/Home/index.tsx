@@ -12,9 +12,9 @@ import {
 } from './styles'
 
 import illustration from '../../assets/illustration.png'
-import { GithubIcon } from '../../components/GithubIcon'
-import { LinkedinIcon } from '../../components/LinkedinIcon'
-import { ArrowDownIcon } from '../../components/ArrowDownIcon'
+import { GithubIcon } from '../../assets/svg/GithubIcon'
+import { LinkedinIcon } from '../../assets/svg/LinkedinIcon'
+import { ArrowDownIcon } from '../../assets/svg/ArrowDownIcon'
 
 export const Home = ({ translation }: PageProps) => {
   return (
