@@ -1,5 +1,5 @@
 import { motion, useScroll } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import lightArrow from '../../assets/lotties/arrow/light-arrow.json'
 import darkArrow from '../../assets/lotties/arrow/dark-arrow.json'
