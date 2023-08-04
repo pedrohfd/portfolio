@@ -11,8 +11,13 @@ export default {
         xl: '1440px',
       },
 
+      backgroundImage: {
+        pattern: "url('./src/assets/pattern/pattern.svg')",
+        darkPattern: "url('./src/assets/pattern/darkPattern.svg')",
+      },
+
       fontFamily: {
-        newake: ['Newake', 'sans-serif'],
+        familjen: ['Familjen Grotesk', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
 

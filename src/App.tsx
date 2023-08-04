@@ -1,4 +1,4 @@
-import { Home } from './pages/Home'
+import { HeroSection } from './pages/HeroSection'
 import { useState } from 'react'
 import { Header } from './components/Header'
 import { Projects } from './pages/Projects'
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
       <Header handleToggleTheme={handleToggleTheme} theme={theme} />
-      <Home />
+      <HeroSection />
 
       <Projects />
     </>
