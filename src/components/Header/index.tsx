@@ -14,6 +14,7 @@ import darkMailIcon from '../../assets/lotties/mail/dark-mail.json'
 import lightSunMoonIcon from '../../assets/lotties/sun-moon/light-sun-moon.json'
 import darkSunMoonIcon from '../../assets/lotties/sun-moon/dark-sun-moon.json'
 import { isMobile } from 'react-device-detect'
+import { HeaderButton } from '../HeaderButton'
 
 export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
   const linkedinLottie = useRef<LottieRefCurrentProps>(null)
@@ -122,54 +123,61 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
   return (
     <header className='fixed flex justify-center w-full mt-2'>
       <div className='flex items-center gap-4 p-2 transition-colors border border-gray-200 rounded-full shadow-md bg-zinc-100 dark:bg-neutral-800'>
-        <span
+        <HeaderButton
           onMouseEnter={() => handleHoverEnter('linkedin')}
           onMouseLeave={() => handleHoverLeave('linkedin')}
-          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+          asChild
         >
-          <Lottie
-            animationData={
-              theme === 'light' ? lightLinkedinIcon : darkLinkedinIcon
-            }
-            lottieRef={linkedinLottie}
-            autoPlay={false}
-            loop={false}
-            className='w-8 h-8'
-          />
-        </span>
+          <a href='https://linkedin.com/in/pedrohfd' target='_blank'>
+            <Lottie
+              animationData={
+                theme === 'light' ? lightLinkedinIcon : darkLinkedinIcon
+              }
+              lottieRef={linkedinLottie}
+              autoPlay={false}
+              loop={false}
+              className='w-8 h-8'
+            />
+          </a>
+        </HeaderButton>
 
-        <span
+        <HeaderButton
           onMouseEnter={() => handleHoverEnter('github')}
           onMouseLeave={() => handleHoverLeave('github')}
-          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+          asChild
         >
-          <Lottie
-            animationData={theme === 'light' ? lightGithubIcon : darkGithubIcon}
-            lottieRef={githubLottie}
-            autoPlay={false}
-            loop={false}
-            className='pt-1 w-9 h-9'
-          />
-        </span>
+          <a href='https://github.com/pedrohfd' target='_blank'>
+            <Lottie
+              animationData={
+                theme === 'light' ? lightGithubIcon : darkGithubIcon
+              }
+              lottieRef={githubLottie}
+              autoPlay={false}
+              loop={false}
+              className='pt-1 w-9 h-9'
+            />
+          </a>
+        </HeaderButton>
 
-        <span
+        <HeaderButton
           onMouseEnter={() => handleHoverEnter('wpp')}
           onMouseLeave={() => handleHoverLeave('wpp')}
-          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+          asChild
         >
-          <Lottie
-            animationData={theme === 'light' ? lightWppIcon : darkWppIcon}
-            lottieRef={wppLottie}
-            autoPlay={false}
-            loop={false}
-            className='w-7 h-7'
-          />
-        </span>
+          <a href='https://wa.me/5515991082862' target='_blank'>
+            <Lottie
+              animationData={theme === 'light' ? lightWppIcon : darkWppIcon}
+              lottieRef={wppLottie}
+              autoPlay={false}
+              loop={false}
+              className='w-7 h-7'
+            />
+          </a>
+        </HeaderButton>
 
-        <span
+        <HeaderButton
           onMouseEnter={() => handleHoverEnter('mail')}
           onMouseLeave={() => handleHoverLeave('mail')}
-          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
         >
           <Lottie
             animationData={theme === 'light' ? lightMailIcon : darkMailIcon}
@@ -178,13 +186,12 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             loop={false}
             className='w-9 h-9'
           />
-        </span>
+        </HeaderButton>
 
-        <span
+        <HeaderButton
           onClick={handleToggleTheme}
           onMouseEnter={() => handleHoverEnter('theme')}
           onMouseLeave={() => handleHoverLeave('theme')}
-          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
         >
           <Lottie
             animationData={
@@ -195,7 +202,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             loop={false}
             className='w-7 h-7'
           />
-        </span>
+        </HeaderButton>
       </div>
     </header>
   )
