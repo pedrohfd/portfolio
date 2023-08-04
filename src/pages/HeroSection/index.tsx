@@ -11,10 +11,10 @@ export const HeroSection = () => {
         <img src={avatar} alt='avatar' className='w-28 h-28' />
       </section>
 
-      <h1 className='mt-4 text-5xl font-bold text-center transition-colors font-familjen text-zinc-800 dark:text-zinc-50'>
+      <h1 className='mt-4 text-5xl font-bold tracking-tight text-center transition-colors font-familjen text-neutral-800 dark:text-zinc-50'>
         Hey, I'm Pedro Henrique
       </h1>
-      <h2 className='mt-4 text-2xl font-medium text-center transition-colors font-inter text-zinc-800 dark:text-zinc-50'>
+      <h2 className='mt-4 text-2xl font-medium text-center transition-colors font-inter text-neutral-800 dark:text-zinc-50'>
         Front-end Developer
       </h2>
     </div>

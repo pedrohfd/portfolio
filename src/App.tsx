@@ -4,6 +4,7 @@ import { Header } from './components/Header'
 import { Projects } from './pages/Projects'
 import './styles/global.css'
 import { GoToTopButton } from './components/GoToTopButton'
+import { AboutSection } from './pages/AboutSection'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -20,9 +21,11 @@ const App = () => {
   }
 
   return (
-    <main className='transition-colors bg-zinc-50 dark:bg-zinc-800'>
+    <main className='transition-colors bg-zinc-50 dark:bg-neutral-800'>
       <Header handleToggleTheme={handleToggleTheme} theme={theme} />
       <HeroSection />
+
+      <AboutSection />
 
       <Projects />
 

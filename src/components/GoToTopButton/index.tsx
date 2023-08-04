@@ -53,7 +53,7 @@ export const GoToTopButton = ({ theme }: GoToTopButtonProps) => {
 
   return (
     <motion.button
-      className='fixed z-10 flex items-center justify-center w-16 h-16 rounded-full bottom-6 right-6 bg-zinc-800 dark:bg-zinc-50'
+      className='fixed z-10 flex items-center justify-center w-16 h-16 rounded-full bottom-6 right-6 bg-neutral-800 dark:bg-zinc-50'
       style={{ translateX: 100 }}
       animate={{ translateX: isVisible ? 0 : 100 }}
       onClick={handleScrollToTop}
@@ -71,7 +71,7 @@ export const GoToTopButton = ({ theme }: GoToTopButtonProps) => {
           cy='32'
           r='30'
           fill='none'
-          className='stroke-2 stroke-zinc-50 dark:stroke-zinc-800'
+          className='stroke-2 stroke-zinc-50 dark:stroke-neutral-800'
           style={{ pathLength: scrollYProgress }}
         ></motion.circle>
       </motion.svg>
