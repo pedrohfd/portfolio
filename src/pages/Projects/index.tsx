@@ -3,7 +3,7 @@ import { ProjectsContainer, ProjectsContent, Title } from './styles'
 
 export const Projects = () => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer className='bg-zinc-50 dark:bg-zinc-800'>
       <ProjectsContent>
         <Title>title</Title>
 
