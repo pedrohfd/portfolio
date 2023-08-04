@@ -134,6 +134,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             lottieRef={linkedinLottie}
             autoPlay={false}
             loop={false}
+            className='w-8 h-8'
           />
         </span>
 
@@ -147,7 +148,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             lottieRef={githubLottie}
             autoPlay={false}
             loop={false}
-            className='pt-1'
+            className='pt-1 w-9 h-9'
           />
         </span>
 
@@ -175,6 +176,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             lottieRef={mailLottie}
             autoPlay={false}
             loop={false}
+            className='w-9 h-9'
           />
         </span>
 
@@ -191,6 +193,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
             lottieRef={themeLottie}
             autoPlay={false}
             loop={false}
+            className='w-7 h-7'
           />
         </span>
       </div>
