@@ -13,6 +13,7 @@ import lightMailIcon from '../../assets/lotties/mail/light-mail.json'
 import darkMailIcon from '../../assets/lotties/mail/dark-mail.json'
 import lightSunMoonIcon from '../../assets/lotties/sun-moon/light-sun-moon.json'
 import darkSunMoonIcon from '../../assets/lotties/sun-moon/dark-sun-moon.json'
+import { isMobile } from 'react-device-detect'
 
 export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
   const linkedinLottie = useRef<LottieRefCurrentProps>(null)
@@ -22,6 +23,10 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
   const themeLottie = useRef<LottieRefCurrentProps>(null)
 
   const handleHoverEnter = (icon: string) => {
+    if (isMobile) {
+      return
+    }
+
     switch (icon) {
       case 'linkedin':
         linkedinLottie.current?.setDirection(1)
@@ -59,6 +64,10 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
   }
 
   const handleHoverLeave = (icon: string) => {
+    if (isMobile) {
+      return
+    }
+
     switch (icon) {
       case 'linkedin':
         linkedinLottie.current?.setDirection(-1)
