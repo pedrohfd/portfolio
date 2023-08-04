@@ -17,3 +17,8 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: 'Newake';
+  src: local('Newake') url('../assets/fonts/Newake-Font-Demo.otf') format('otf');
+}

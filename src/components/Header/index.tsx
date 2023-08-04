@@ -1,70 +1,190 @@
+import { useEffect, useRef } from 'react'
+import Lottie, { LottieRefCurrentProps } from 'lottie-react'
+
 import { HeaderProps } from '../../types'
-import {
-  Content,
-  Item,
-  Portal,
-  Root,
-  Trigger,
-  Arrow,
-} from '@radix-ui/react-dropdown-menu'
 
-import { SunIcon } from '../../assets/svg/SunIcon'
-import { MoonIcon } from '../../assets/svg/MoonIcon'
+import lightLinkedinIcon from '../../assets/lotties/linkedin/light-linkedin.json'
+import darkLinkedinIcon from '../../assets/lotties/linkedin/dark-linkedin.json'
+import lightGithubIcon from '../../assets/lotties/github/light-github.json'
+import darkGithubIcon from '../../assets/lotties/github/dark-github.json'
+import lightWppIcon from '../../assets/lotties/wpp/light-wpp.json'
+import darkWppIcon from '../../assets/lotties/wpp/dark-wpp.json'
+import lightMailIcon from '../../assets/lotties/mail/light-mail.json'
+import darkMailIcon from '../../assets/lotties/mail/dark-mail.json'
+import lightSunMoonIcon from '../../assets/lotties/sun-moon/light-sun-moon.json'
+import darkSunMoonIcon from '../../assets/lotties/sun-moon/dark-sun-moon.json'
 
-export const Header = ({
-  handleToggleTheme,
-  handleChangeLanguage,
-  theme,
-  translation,
-}: HeaderProps) => {
+export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
+  const linkedinLottie = useRef<LottieRefCurrentProps>(null)
+  const githubLottie = useRef<LottieRefCurrentProps>(null)
+  const wppLottie = useRef<LottieRefCurrentProps>(null)
+  const mailLottie = useRef<LottieRefCurrentProps>(null)
+  const themeLottie = useRef<LottieRefCurrentProps>(null)
+
+  const handleHoverEnter = (icon: string) => {
+    switch (icon) {
+      case 'linkedin':
+        linkedinLottie.current?.setDirection(1)
+        linkedinLottie.current?.play()
+        break
+
+      case 'github':
+        githubLottie.current?.setDirection(1)
+        githubLottie.current?.play()
+        break
+
+      case 'wpp':
+        wppLottie.current?.setDirection(1)
+        wppLottie.current?.play()
+        break
+
+      case 'mail':
+        mailLottie.current?.setDirection(1)
+        mailLottie.current?.play()
+        break
+
+      case 'theme':
+        if (theme === 'light') {
+          themeLottie.current?.setDirection(-1)
+          themeLottie.current?.play()
+        } else {
+          themeLottie.current?.setDirection(1)
+          themeLottie.current?.play()
+        }
+        break
+
+      default:
+        break
+    }
+  }
+
+  const handleHoverLeave = (icon: string) => {
+    switch (icon) {
+      case 'linkedin':
+        linkedinLottie.current?.setDirection(-1)
+        linkedinLottie.current?.play()
+        break
+
+      case 'github':
+        githubLottie.current?.setDirection(-1)
+        githubLottie.current?.play()
+        break
+
+      case 'wpp':
+        wppLottie.current?.setDirection(-1)
+        wppLottie.current?.play()
+        break
+
+      case 'mail':
+        mailLottie.current?.setDirection(-1)
+        mailLottie.current?.play()
+        break
+
+      case 'theme':
+        if (theme === 'light') {
+          themeLottie.current?.setDirection(1)
+          themeLottie.current?.play()
+        } else {
+          themeLottie.current?.setDirection(-1)
+          themeLottie.current?.play()
+        }
+        break
+
+      default:
+        break
+    }
+  }
+
+  useEffect(() => {
+    linkedinLottie.current?.stop()
+    githubLottie.current?.stop()
+    wppLottie.current?.stop()
+    mailLottie.current?.stop()
+
+    if (theme === 'light') {
+      themeLottie.current?.goToAndStop(14, true)
+    }
+
+    if (theme === 'dark') {
+      themeLottie.current?.goToAndStop(0, true)
+    }
+  }, [theme])
+
   return (
-    <header className='fixed flex items-center justify-between w-full px-32 pt-12 transition-colors bg-neutral-50 dark:bg-neutral-900'>
-      <h1 className='text-5xl font-bold tracking-[-0.0625rem] text-neutral-900 dark:text-neutral-50 transition-colors'>
-        ph<span className='text-purple-600 dark:text-purple-500'>.</span>
-      </h1>
+    <header className='fixed flex justify-center w-full mt-2'>
+      <div className='flex items-center gap-4 p-2 transition-colors border border-gray-200 rounded-full bg-zinc-100 dark:bg-neutral-800'>
+        <span
+          onMouseEnter={() => handleHoverEnter('linkedin')}
+          onMouseLeave={() => handleHoverLeave('linkedin')}
+          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+        >
+          <Lottie
+            animationData={
+              theme === 'light' ? lightLinkedinIcon : darkLinkedinIcon
+            }
+            lottieRef={linkedinLottie}
+            autoPlay={false}
+            loop={false}
+          />
+        </span>
 
-      <nav>
-        <ul className='flex gap-8 list-none'>
-          <li>
-            <Root modal={false}>
-              <Trigger
-                asChild
-                className='text-lg font-normal transition-all border-none outline-none cursor-pointer text-neutral-800 dark:text-neutral-50 font-inter bg-none hover:underline hover:text-neutral-500'
-              >
-                <button>{translation.language}</button>
-              </Trigger>
+        <span
+          onMouseEnter={() => handleHoverEnter('github')}
+          onMouseLeave={() => handleHoverLeave('github')}
+          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+        >
+          <Lottie
+            animationData={theme === 'light' ? lightGithubIcon : darkGithubIcon}
+            lottieRef={githubLottie}
+            autoPlay={false}
+            loop={false}
+            className='pt-1'
+          />
+        </span>
 
-              <Portal>
-                <Content className='bg-neutral-200 dark:bg-neutral-700 rounded-[0.3rem] py-[0.1rem] px-[0.3rem] animate-scaleIn origin-radix-dropdown-menu'>
-                  {translation.language === 'EN' ? (
-                    <Item
-                      onSelect={() => handleChangeLanguage('PT')}
-                      className='text-lg font-normal border-none outline-none cursor-pointer dark:text-neutral-50 dark-neutral-800 font-inter bg-none'
-                    >
-                      PT
-                    </Item>
-                  ) : (
-                    <Item
-                      onSelect={() => handleChangeLanguage('EN')}
-                      className='text-lg font-normal border-none outline-none cursor-pointer dark:text-neutral-50 dark-neutral-800 font-inter bg-none'
-                    >
-                      EN
-                    </Item>
-                  )}
-                  <Arrow className='fill-neutral-200 dark:fill-neutral-700' />
-                </Content>
-              </Portal>
-            </Root>
-          </li>
-          <li onClick={handleToggleTheme}>
-            {theme === 'light' ? (
-              <SunIcon className='w-8 h-8 text-neutral-700' />
-            ) : (
-              <MoonIcon className='w-8 h-8 text-neutral-200' />
-            )}
-          </li>
-        </ul>
-      </nav>
+        <span
+          onMouseEnter={() => handleHoverEnter('wpp')}
+          onMouseLeave={() => handleHoverLeave('wpp')}
+          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+        >
+          <Lottie
+            animationData={theme === 'light' ? lightWppIcon : darkWppIcon}
+            lottieRef={wppLottie}
+            autoPlay={false}
+            loop={false}
+            className='w-7 h-7'
+          />
+        </span>
+
+        <span
+          onMouseEnter={() => handleHoverEnter('mail')}
+          onMouseLeave={() => handleHoverLeave('mail')}
+          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+        >
+          <Lottie
+            animationData={theme === 'light' ? lightMailIcon : darkMailIcon}
+            lottieRef={mailLottie}
+            autoPlay={false}
+            loop={false}
+          />
+        </span>
+
+        <span
+          onClick={handleToggleTheme}
+          onMouseEnter={() => handleHoverEnter('theme')}
+          onMouseLeave={() => handleHoverLeave('theme')}
+          className='flex items-center justify-center w-12 h-12 transition-colors rounded-full bg-neutral-800 dark:bg-zinc-50'
+        >
+          <Lottie
+            animationData={
+              theme === 'light' ? lightSunMoonIcon : darkSunMoonIcon
+            }
+            lottieRef={themeLottie}
+            autoPlay={false}
+            loop={false}
+          />
+        </span>
+      </div>
     </header>
   )
 }

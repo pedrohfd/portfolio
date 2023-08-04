@@ -20,7 +20,7 @@ export const Home = ({ translation }: PageProps) => {
   return (
     <HomeContainer>
       <HomeContent>
-        <div>
+        {/* <div>
           <Presentation>{translation.home.presentation}</Presentation>
 
           <Role>{translation.home.role}</Role>
@@ -44,13 +44,13 @@ export const Home = ({ translation }: PageProps) => {
           </section>
         </div>
 
-        <HomeImage src={illustration} alt='illustration' />
+        <HomeImage src={illustration} alt='illustration' /> */}
       </HomeContent>
 
-      <Footer>
+      {/* <Footer>
         Scroll
         <ArrowDownIcon />
-      </Footer>
+      </Footer> */}
     </HomeContainer>
   )
 }
