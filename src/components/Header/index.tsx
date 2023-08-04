@@ -121,7 +121,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
 
   return (
     <header className='fixed flex justify-center w-full mt-2'>
-      <div className='flex items-center gap-4 p-2 transition-colors border border-gray-200 rounded-full bg-zinc-100 dark:bg-neutral-800'>
+      <div className='flex items-center gap-4 p-2 transition-colors border border-gray-200 rounded-full shadow-md bg-zinc-100 dark:bg-neutral-800'>
         <span
           onMouseEnter={() => handleHoverEnter('linkedin')}
           onMouseLeave={() => handleHoverLeave('linkedin')}
