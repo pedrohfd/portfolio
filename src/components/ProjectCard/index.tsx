@@ -1,4 +1,3 @@
-import { Draft } from '../../types'
 import {
   ProjectCardButtonArea,
   ProjectCardContainer,
@@ -11,29 +10,27 @@ import {
   ProjectCardTitle,
 } from './styles'
 
-export const ProjectCard = (project: Draft) => {
+export const ProjectCard = () => {
   return (
     <ProjectCardContainer>
-      <ProjectCardImage src={project.image} />
+      <ProjectCardImage src='' />
 
       <ProjectCardInfo>
-        <ProjectCardTitle>{project.title}</ProjectCardTitle>
+        <ProjectCardTitle>title</ProjectCardTitle>
 
-        <ProjectCardDescription>{project.description}</ProjectCardDescription>
+        <ProjectCardDescription>description</ProjectCardDescription>
 
         <ProjectCardTechnologiesArea>
-          {project.technologies.map((technology, index) => (
-            <i className={`devicon-${technology}-plain`} key={index} />
-          ))}
+          <i className={`devicon-typescript-plain`} key={1} />
         </ProjectCardTechnologiesArea>
 
         <ProjectCardButtonArea>
-          <ProjectCardDemoButton href={project.demo.link} target='_blank'>
-            {project.demo.text}
+          <ProjectCardDemoButton href='' target='_blank'>
+            text
           </ProjectCardDemoButton>
 
-          <ProjectCardSourceButton href={project.source.link} target='_blank'>
-            {project.source.text}
+          <ProjectCardSourceButton href='' target='_blank'>
+            text
           </ProjectCardSourceButton>
         </ProjectCardButtonArea>
       </ProjectCardInfo>

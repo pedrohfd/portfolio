@@ -1,23 +1,3 @@
-export interface Translations {
-  pt: Language
-  en: Language
-}
-
-export interface Language {
-  language: string
-  home: {
-    presentation: string
-    role: string
-    summary: string
-    getInTouch: string
-    resume: string
-  }
-  projects: {
-    title: string
-    drafts: Draft[]
-  }
-}
-
 export interface Draft {
   title: string
   description: string
@@ -33,15 +13,9 @@ export interface Draft {
   }
 }
 
-export interface PageProps {
-  translation: Language
-}
-
 export interface HeaderProps {
   handleToggleTheme: () => void
-  handleChangeLanguage: (state: string) => void
   theme?: 'light' | 'dark'
-  translation: Language
 }
 
 export interface ThemeProps {

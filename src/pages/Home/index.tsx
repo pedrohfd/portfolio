@@ -1,4 +1,3 @@
-import { PageProps } from '../../types'
 import {
   Footer,
   HomeContainer,
@@ -16,16 +15,16 @@ import { GithubIcon } from '../../assets/svg/GithubIcon'
 import { LinkedinIcon } from '../../assets/svg/LinkedinIcon'
 import { ArrowDownIcon } from '../../assets/svg/ArrowDownIcon'
 
-export const Home = ({ translation }: PageProps) => {
+export const Home = () => {
   return (
     <HomeContainer>
       <HomeContent>
         <div>
-          <Presentation>{translation.home.presentation}</Presentation>
+          <Presentation>presentation</Presentation>
 
-          <Role>{translation.home.role}</Role>
+          <Role>role</Role>
 
-          <Summary>{translation.home.summary}</Summary>
+          <Summary>summary</Summary>
 
           <section>
             <LinkIconButton href='https://github.com/pedrohfd' target='_blank'>
@@ -37,9 +36,9 @@ export const Home = ({ translation }: PageProps) => {
             >
               <LinkedinIcon />
             </LinkIconButton>
-            <LinkButton href='#'>{translation.home.getInTouch}</LinkButton>
+            <LinkButton href='#'>getInTouch</LinkButton>
             <LinkButton download='../../assets/Currículo.pdf'>
-              {translation.home.resume}
+              resume
             </LinkButton>
           </section>
         </div>
