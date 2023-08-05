@@ -12,8 +12,8 @@ export default {
       },
 
       backgroundImage: {
-        pattern: "url('./src/assets/pattern/pattern.svg')",
-        darkPattern: "url('./src/assets/pattern/darkPattern.svg')",
+        pattern: "url('pattern/pattern.svg')",
+        darkPattern: "url('pattern/darkPattern.svg')",
       },
 
       fontFamily: {
