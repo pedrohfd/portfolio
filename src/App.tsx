@@ -5,6 +5,7 @@ import { Projects } from './pages/Projects'
 import './styles/global.css'
 import { GoToTopButton } from './components/GoToTopButton'
 import { AboutSection } from './pages/AboutSection'
+import { ResumeSection } from './pages/ResumeSection'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -26,6 +27,8 @@ const App = () => {
       <HeroSection />
 
       <AboutSection />
+
+      <ResumeSection />
 
       <Projects />
 
