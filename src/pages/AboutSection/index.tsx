@@ -2,7 +2,7 @@ import { HandwriteArrow } from '../../assets/svg/HandwriteArrow'
 
 export const AboutSection = () => {
   return (
-    <div className='px-12 pt-20 transition-colors bg-zinc-50 dark:bg-neutral-800'>
+    <div className='px-12 pt-20 '>
       <section>
         <h1 className='w-24 text-4xl transition-colors font-familjen text-zinc-800 dark:text-zinc-50'>
           A bit about me
