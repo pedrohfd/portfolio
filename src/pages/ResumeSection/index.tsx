@@ -1,4 +1,4 @@
-import resume from '../../assets/resume.svg'
+import resume from '../../assets/svg/resume.svg'
 
 export const ResumeSection = () => {
   return (
