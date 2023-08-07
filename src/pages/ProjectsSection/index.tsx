@@ -1,4 +1,4 @@
-import devLinks from '../../assets/svg/devLinks.svg'
+import devLinks from '../../assets/svg/dev-links.svg'
 import spaceTourism from '../../assets/svg/spaceTourism.svg'
 
 export const ProjectsSection = () => {
