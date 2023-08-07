@@ -7,12 +7,16 @@ export const ResumeSection = () => {
         My resume
       </h1>
 
-      <section className='flex justify-center w-full px-5'>
+      <section className='flex flex-col w-full px-5'>
         <img
           src={resume}
           alt='resume'
           className='lg:w-[60rem] transition-colors shadow-lg dark:shadow-zinc-600'
         />
+
+        <button className='self-start mt-5 ml-1 text-lg underline transition-colors text-zinc-700 dark:text-zinc-50 font-inter hover:text-zinc-400 dark:hover:text-zinc-400'>
+          Download CV
+        </button>
       </section>
     </div>
   )
