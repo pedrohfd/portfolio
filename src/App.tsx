@@ -6,6 +6,7 @@ import './styles/global.css'
 import { GoToTopButton } from './components/GoToTopButton'
 import { AboutSection } from './pages/AboutSection'
 import { ResumeSection } from './pages/ResumeSection'
+import { FooterSection } from './pages/FooterSection'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -31,6 +32,8 @@ const App = () => {
       <ResumeSection />
 
       <ProjectsSection />
+
+      <FooterSection />
 
       <GoToTopButton theme={theme} />
     </main>
