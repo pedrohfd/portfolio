@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ['./index.html', './src/**/*'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       screens: {
@@ -12,8 +12,8 @@ export default {
       },
 
       backgroundImage: {
-        pattern: "url('pattern/pattern.svg')",
-        darkPattern: "url('pattern/darkPattern.svg')",
+        pattern: "url('/pattern/pattern.svg')",
+        darkPattern: "url('/pattern/darkPattern.svg')",
       },
 
       fontFamily: {
