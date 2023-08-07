@@ -1,5 +1,7 @@
 import Lottie from 'lottie-react'
 import avatar from '../../assets/images/avatar.png'
+import pattern from '/pattern/pattern.svg'
+import darkPatter from 'pattern/darkPattern.svg'
 
 import confetti from '../../assets/lotties/confetti/confetti.json'
 
