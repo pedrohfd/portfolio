@@ -1,7 +1,7 @@
 import { HeroSection } from './pages/HeroSection'
 import { useState } from 'react'
 import { Header } from './components/Header'
-import { Projects } from './pages/Projects'
+import { ProjectsSection } from './pages/ProjectsSection'
 import './styles/global.css'
 import { GoToTopButton } from './components/GoToTopButton'
 import { AboutSection } from './pages/AboutSection'
@@ -30,7 +30,7 @@ const App = () => {
 
       <ResumeSection />
 
-      <Projects />
+      <ProjectsSection />
 
       <GoToTopButton theme={theme} />
     </main>
