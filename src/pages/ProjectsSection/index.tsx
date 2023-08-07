@@ -24,14 +24,14 @@ export const ProjectsSection = () => {
           <a
             href='https://dev-links-pedrohfd.vercel.app'
             target='__blank'
-            className='text-xl transition-colors font-inter text-zinc-700 dark:text-zinc-100'
+            className='text-xl underline transition-colors font-inter text-zinc-700 dark:text-zinc-100 hover:text-zinc-400 dark:hover:text-zinc-400'
           >
             View project
           </a>
           <a
             href='https://github.com/pedrohfd/devLinks'
             target='__blank'
-            className='ml-6 text-xl transition-colors font-inter text-zinc-700 dark:text-zinc-100'
+            className='ml-6 text-xl underline transition-colors font-inter text-zinc-700 dark:text-zinc-100 hover:text-zinc-400 dark:hover:text-zinc-400'
           >
             View code
           </a>
@@ -54,14 +54,14 @@ export const ProjectsSection = () => {
           <a
             href='https://space-tourism-pedrohfd.vercel.app'
             target='__blank'
-            className='text-xl transition-colors font-inter text-zinc-700 dark:text-zinc-100'
+            className='text-xl underline transition-colors font-inter text-zinc-700 dark:text-zinc-100 hover:text-zinc-400 dark:hover:text-zinc-400'
           >
             View project
           </a>
           <a
             href='https://github.com/pedrohfd/space-tourism'
             target='__blank'
-            className='ml-6 text-xl transition-colors font-inter text-zinc-700 dark:text-zinc-100'
+            className='ml-6 text-xl underline transition-colors font-inter text-zinc-700 dark:text-zinc-100 hover:text-zinc-400 dark:hover:text-zinc-400'
           >
             View code
           </a>
