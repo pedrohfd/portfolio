@@ -25,14 +25,14 @@ export default {
       },
 
       keyframes: {
-        scaleIn: {
-          '0%': { transform: 'scale(0)', opacity: 0 },
-          '100%': { transform: 'scale(1)', opacity: 1 },
+        slideUpAndFade: {
+          from: { opacity: 0, transform: 'translateY(2px)' },
+          to: { opacity: 1, transform: 'translateY(0)' },
         },
       },
 
       animation: {
-        scaleIn: 'scaleIn 0.2s ease-out',
+        slideUpAndFade: 'slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)',
       },
     },
   },
