@@ -11,10 +11,10 @@ export const ResumeSection = () => {
         <img
           src={resume}
           alt='resume'
-          className='lg:w-[60rem] transition-colors shadow-lg dark:shadow-zinc-600'
+          className='lg:w-[60rem] transition-colors self-center shadow-lg dark:shadow-zinc-600'
         />
 
-        <button className='relative text-lg text-center transition-colors rounded-full shadow-lg mt-14 h-11 font-inter bg-neutral-800 group shadow-neutral-400 dark:shadow-zinc-600 dark:bg-zinc-50 '>
+        <button className='relative lg:w-[60rem] lg:self-center text-lg text-center transition-colors rounded-full shadow-lg mt-14 h-11 font-inter bg-neutral-800 group shadow-neutral-400 dark:shadow-zinc-600 dark:bg-zinc-50 '>
           <div className='absolute top-0 left-0 w-full h-full overflow-hidden text-zinc-50 dark:text-neutral-800'>
             <p className='absolute top-0 flex items-center justify-center w-full h-full overflow-hidden transition-all group-hover:-top-full '>
               Download CV
