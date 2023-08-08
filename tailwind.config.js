@@ -9,7 +9,7 @@ export default {
         md: '768px',
         lg: '976px',
         xl: '1440px',
-        touch: { raw: 'hover: none' },
+        hover: { raw: 'hover: hover' },
         'can-hover': { raw: 'hover: hover' },
       },
 
