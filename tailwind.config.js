@@ -9,6 +9,8 @@ export default {
         md: '768px',
         lg: '976px',
         xl: '1440px',
+        touch: { raw: 'hover: none' },
+        'can-hover': { raw: 'hover: hover' },
       },
 
       backgroundImage: {
