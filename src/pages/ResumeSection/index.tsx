@@ -14,8 +14,31 @@ export const ResumeSection = () => {
           className='lg:w-[60rem] transition-colors shadow-lg dark:shadow-zinc-600'
         />
 
-        <button className='self-start mt-5 ml-1 text-lg underline transition-colors text-zinc-700 dark:text-zinc-50 font-inter hover:text-zinc-400 dark:hover:text-zinc-400'>
-          Download CV
+        <button className='relative text-lg text-center transition-colors rounded-full shadow-lg mt-14 h-11 font-inter bg-neutral-800 group shadow-neutral-400 dark:shadow-zinc-600 dark:bg-zinc-50 '>
+          <div className='absolute top-0 left-0 w-full h-full overflow-hidden text-zinc-50 dark:text-neutral-800'>
+            <p className='absolute top-0 flex items-center justify-center w-full h-full overflow-hidden transition-all group-hover:-top-full '>
+              Download CV
+            </p>
+            <span className='absolute left-0 flex items-center justify-center w-full h-full overflow-hidden transition-all group-hover:top-0 top-full'>
+              <svg
+                aria-hidden='true'
+                role='img'
+                width='2rem'
+                height='2rem'
+                preserveAspectRatio='xMidYMid meet'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  stroke-width='2'
+                  d='M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17'
+                ></path>
+              </svg>
+            </span>
+          </div>
         </button>
       </section>
     </div>
