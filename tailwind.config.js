@@ -1,5 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 
+const plugin = require('tailwindcss/plugin')
+
+const hoverPlugin = plugin(function ({ addVariant, e, postcss }) {
+  addVariant('hover', ({ container, separator }) => {
+    const hoverRule = postcss.atRule({
+      name: 'media',
+      params: '(hover: hover)',
+    })
+    hoverRule.append(container.nodes)
+    container.append(hoverRule)
+    hoverRule.walkRules((rule) => {
+      rule.selector = `.${e(
+        `hover${separator}${rule.selector.slice(1)}`,
+      )}:hover`
+    })
+  })
+})
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -9,8 +27,6 @@ export default {
         md: '768px',
         lg: '976px',
         xl: '1440px',
-        hover: { raw: 'hover: hover' },
-        'can-hover': { raw: 'hover: hover' },
       },
 
       backgroundImage: {
@@ -36,5 +52,5 @@ export default {
     },
   },
   darkMode: 'class',
-  plugins: [require('tailwindcss-radix')()],
+  plugins: [require('tailwindcss-radix')(), hoverPlugin()],
 }
