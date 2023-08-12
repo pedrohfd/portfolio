@@ -7,6 +7,7 @@ import { GoToTopButton } from './components/GoToTopButton'
 import { AboutSection } from './pages/AboutSection'
 import { ResumeSection } from './pages/ResumeSection'
 import { FooterSection } from './pages/FooterSection'
+import { EmailSection } from './pages/EmailSection'
 
 const App = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -32,6 +33,8 @@ const App = () => {
       <ResumeSection />
 
       <ProjectsSection />
+
+      <EmailSection />
 
       <FooterSection />
 

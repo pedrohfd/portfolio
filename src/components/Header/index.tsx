@@ -105,6 +105,11 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
     }
   }
 
+  const handleScrollToEmail = () => {
+    const emailSection = document.getElementById('email-section')
+    emailSection?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   useEffect(() => {
     linkedinLottie.current?.stop()
     githubLottie.current?.stop()
@@ -178,6 +183,7 @@ export const Header = ({ handleToggleTheme, theme }: HeaderProps) => {
         <HeaderButton
           onMouseEnter={() => handleHoverEnter('mail')}
           onMouseLeave={() => handleHoverLeave('mail')}
+          onClick={handleScrollToEmail}
         >
           <Lottie
             animationData={theme === 'light' ? lightMailIcon : darkMailIcon}
