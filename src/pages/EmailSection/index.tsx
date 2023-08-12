@@ -5,7 +5,6 @@ import {
   Control,
   Message,
   Submit,
-  FormMessage,
 } from '@radix-ui/react-form'
 
 export const EmailSection = () => {
