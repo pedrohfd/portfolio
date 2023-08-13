@@ -13,13 +13,12 @@ interface AirbnbReviewEmailProps {
   reviewText?: string
 }
 
-export const ContactEmail = ({
-  authorName = 'Pedro',
-  reviewText = `“Zeno was a great guest! Easy communication, the apartment was left
+export const ContactEmail = () => {
+  const authorName = 'Pedro'
+  const reviewText = `“Zeno was a great guest! Easy communication, the apartment was left
     in great condition, very polite, and respectful of all house rules.
     He’s welcome back anytime and would easily recommend him to any
-    host!”`,
-}: AirbnbReviewEmailProps) => {
+    host!”`
   const previewText = `Leia o email de ${authorName}`
 
   return (
